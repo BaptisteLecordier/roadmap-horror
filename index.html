@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap Horreur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <button class="menu-button" id="roadmapButton" aria-label="Ouvrir la roadmap">☰</button>
+  <header class="phase-header">
+    <div class="phase-inner">
+      <span class="eyebrow" id="phaseLabel"></span>
+      <strong class="phase-title" id="phaseTitle"></strong>
+      <p class="phase-question" id="phaseQuestion"></p>
+      <div class="phase-progress" aria-label="Progression dans la phase">
+        <strong class="phase-progress__count" id="phaseProgressLabel"></strong>
+        <div class="phase-progress__track" id="phaseProgressTrack"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <article class="work-view" id="workView" tabindex="0">
+      <div class="work-meta-line"><span id="workStudyDate"></span></div>
+      <h1 id="workTitle"></h1>
+      <p class="work-author" id="workAuthor"></p>
+      <div class="tag-row" id="workTags"></div>
+      <p class="utility-sentence" id="workUtility"></p>
+      <section class="hero-pitch" id="heroPitch" aria-label="Pitch"></section>
+
+      <section class="content-section" id="questionsSection">
+        <h2>Questions centrales</h2>
+        <ul class="question-list" id="questionList"></ul>
+      </section>
+      <section class="content-section" id="whySection">
+        <h2>Pourquoi cette œuvre est étudiée ici</h2>
+        <ul class="clean-list" id="whyList"></ul>
+      </section>
+      <section class="content-section" id="watchSection">
+        <h2>À observer</h2>
+        <ul class="clean-list" id="watchList"></ul>
+      </section>
+      <div class="accordion-group" id="accordionGroup"></div>
+    </article>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navigation entre les œuvres">
+    <button class="bottom-nav__item" id="prevBottomButton"><span>Précédent</span><strong id="prevWorkLabel">—</strong></button>
+    <button class="bottom-nav__item bottom-nav__item--next" id="nextBottomButton"><span>Suivant</span><strong id="nextWorkLabel">—</strong></button>
+  </nav>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__overlay" id="drawerOverlay"></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Roadmap complète">
+      <div class="drawer__header">
+        <div><span class="eyebrow">Roadmap</span><h2>Parcours d’étude</h2></div>
+        <button class="close-button" id="closeDrawerButton" aria-label="Fermer">×</button>
+      </div>
+      <div class="roadmap-list" id="roadmapList"></div>
+    </div>
+  </aside>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
